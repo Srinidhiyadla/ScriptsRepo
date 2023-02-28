@@ -1,0 +1,42 @@
+---Core Java--
+JVM Architecture- components, memory architecture, JIT
+OOP principle
+SOLID principle
+Data types
+WrapperTypes - Boxing, Autoboxing, Unboxing.
+Scopes of methods
+Different type of Inheritances
+How do we achieve multiple inheritance in JAVA
+Method OverLoading and Method Overriding
+Static Polymorphism and Dynamic Polymorphism
+Access specifier - mainly private and protected
+Difference between final,finally,finalize
+What is garbage collector
+What is the parent class in JAVA
+What are the predefined methods in Object class
+What is String Constant Pool
+Difference between StringBuffer & StringBuilder
+difference between == and equals() method
+Collections - default size of ArrayList, HashSet, TreeSet
+Working of HashSet, ArrayList, LinkedList
+When to use ArrayList or Linked List
+Exception Hierarchy, How to deal with exceptions - try cacth, propagation
+Erros in JAVA
+What is functional interface
+Java 8 features - Streams API(implementation,methods), Interfaces(static and default method)
+Patterns in Java - Prototype,Singleton,Abstract Factory etc.
+I/O Streams - ByteStream,FileStream
+Serialization
+Threads - Life cycle, details about the methods available
+Different types of Thread pools
+
+---Spring---
+IOC,DI,DispatcherServlet definitions and workflow
+Hibernate Life cycle
+What is JPA
+Different Mappings - ManyToOne,ManytoMany
+Advantages of Springboot over Spring
+@Bean,@Configuration,@Component,@SpringBootApplication,@ComponentScan,@Service,@Repository,Controller,@RestController,@ResponseBody
+Difference between @Controller and @RestController
+Different Http Methods -@PostMapping,@GetMapping,@PutMapping,@DeleteMapping,@RequestMapping
+

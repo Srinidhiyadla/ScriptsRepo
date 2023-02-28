@@ -1,0 +1,104 @@
+ORM :
+
+What Is ORM 
+
+1.ORM, an abbreviation for Object-relational mapping, is a programming approach that connects object code to a relational database via a metadata descriptor.
+2. This object code is developed in object-oriented programming (OOP) languages like Java, Python, C++, C#, etc.
+3. ORM transforms data between type systems that don’t get along in relational databases or OOP languages.
+4. In other words, it is a technique for storing, recovering, updating, as well as deleting from an object-oriented program in a relational (table) database.
+
+
+Differences Between JDBC & ORM
+
+
+
+
+JPA :
+
+1. JPA stands for Java Persistent API.
+2. It is an official specification from Java that dictates the APIs to be used to persist Entities (Java Objects) in the database
+3. This specification is implemented by Hibernate and other ORM tools.
+4. There are several ORM tools that implement their own API. 
+5. This becomes a portability problem if you want to switch between them for any reason
+6 . This is where JPA helps you by providing an API layer on top of ORM tools. Just like JDBC API vs various database core drivers.
+7.  JPA/ORM tools are only for RDBMS, not for schemaless databases.
+8. Jpa Provides JPQL to write queries.
+9. As JPA is just a specification, it doesn't perform any operation by itself. It requires an implementation
+
+JPA Entity :
+
+1. Entity is nothing but a pojo class annotated with @Entity annotation.
+2. @Entity Annotation should be applied at pojo class level to make the class as an entity.
+
+Entity Properties :
+
+Following are the properties of an entity that an object must have: -
+
+Persistability - An object is called persistent if it is stored in the database and can be accessed anytime.
+Persistent Identity - In Java, each entity is unique and represents as an object identity. Similarly, when the object identity is stored in a database then it is represented as persistence identity. This object identity is equivalent to primary key in database.
+Transactionality - Entity can perform various operations such as create, delete, update. Each operation makes some changes in the database. It ensures that whatever changes made in the database either be succeed or failed atomically.
+Granuality - Entities should not be primitives, primitive wrappers or built-in objects with single dimensional state.
+
+Hibernate :
+
+1. Hibernate is a Java framework that simplifies the development of Java application to interact with the database. 
+2.It is an open source, lightweight, ORM (Object Relational Mapping) tool. 
+3 . Hibernate implements the specifications of JPA (Java Persistence API) for data persistence.
+4. It Provides one query language named HQL(Hibernate Query Language) to write hibernate based queries.
+
+
+Advantages of Hibernate Framework
+Following are the advantages of hibernate framework:
+
+1) Open Source and Lightweight
+Hibernate framework is open source under the LGPL license and lightweight.
+
+2) Fast Performance
+The performance of hibernate framework is fast because cache is internally used in hibernate framework. There are two types of cache in hibernate framework first level cache and second level cache. First level cache is enabled by default.
+
+3) Database Independent Query
+HQL (Hibernate Query Language) is the object-oriented version of SQL. It generates the database independent queries. So you don't need to write database specific queries. Before Hibernate, if database is changed for the project, we need to change the SQL query as well that leads to the maintenance problem.
+
+4) Automatic Table Creation
+Hibernate framework provides the facility to create the tables of the database automatically. So there is no need to create tables in the database manually.
+
+5) Simplifies Complex Join
+Fetching data from multiple tables is easy in hibernate framework.
+
+6) Provides Query Statistics and Database Status
+Hibernate supports Query cache and provide statistics about query and database status.
+
+Caching :
+
+1. Caching is a mechanism to enhance the performance of a system. 
+2. It is a buffer memorythat lies between the application and the database. 
+3. Cache memory stores recently used data items in order to reduce the number of database hits as much as possible.
+
+First Level Cache :
+
+1. The first-level cache is the Session cache and is a mandatory cache through which all requests must pass. 
+2. The Session object keeps an object under its own power before committing it to the database.
+3. If you issue multiple updates to an object, Hibernate tries to delay doing the update as long as possible to reduce the number of update SQL statements issued.
+4. If you close the session, all the objects being cached are lost and either persisted or updated in the database
+
+Second Level Cache :
+
+1.Second level cache is an optional cache and first-level cache will always be consulted before any attempt is made to locate an object in the second-level cache.
+2. The second level cache can be configured on a per-class and per-collection basis and mainly responsible for caching objects across sessions.
+
+Elements of Hibernate Architecture :
+
+For creating the first hibernate application, we must know the elements of Hibernate architecture. They are as follows:
+
+SessionFactory ;
+The SessionFactory is a factory of session and client of ConnectionProvider. It holds second level cache (optional) of data. The org.hibernate.SessionFactory interface provides factory method to get the object of Session.
+
+Session :
+The session object provides an interface between the application and data stored in the database. It is a short-lived object and wraps the JDBC connection. It is factory of Transaction, Query and Criteria. It holds a first-level cache (mandatory) of data. The org.hibernate.Session interface provides methods to insert, update and delete the object. It also provides factory methods for Transaction, Query and Criteria.
+
+Transaction :
+The transaction object specifies the atomic unit of work. It is optional. The org.hibernate.Transaction interface provides methods for transaction management.
+ 
+
+
+
